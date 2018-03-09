@@ -1,4 +1,4 @@
-﻿SystemUtil.Run "C:\Users\utpal\Desktop\CI_App\FlightApp.exe"
+﻿SystemUtil.Run "C:\Users\Ideliver\source\repos\FlightAppWin\FlightApp\FlightApp\bin\Debug\FlightApp.exe"
 
 UIAWindow("Login").UIAEdit("txtUser").SetValue DataTable.Value("Username","Action1")
 UIAWindow("Login").UIAEdit("txtPass").SetValue DataTable.Value("Password","Action1")
