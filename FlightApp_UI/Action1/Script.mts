@@ -1,13 +1,13 @@
 ﻿'SystemUtil.Run "C:\Users\utpal\Desktop\CI_App\FlightApp.exe"
 
 If UIAWindow("Login").UIAEdit("txtUser").Exist(5) Then
-	UIAWindow("Login").UIAEdit("txtUser").SetValue DataTable.Value("Username","Action1")	
+	UIAWindow("Login").UIAEdit("txtUser").SetValue DataTable.Value("Username")	
 else
 	reporter.ReportEvent micFail,"Enter value" ,"Username in not enter."
 End If
 
 If UIAWindow("Login").UIAEdit("txtPass").Exist(5) Then
-	UIAWindow("Login").UIAEdit("txtPass").SetValue DataTable.Value("Password","Action1")	
+	UIAWindow("Login").UIAEdit("txtPass").SetValue DataTable.Value("Password")	
 else
 	reporter.ReportEvent micFail,"Enter value" ,"Password in not enter."
 End If
