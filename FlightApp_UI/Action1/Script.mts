@@ -1,4 +1,4 @@
-﻿SystemUtil.Run "C:\Users\Ideliver\source\repos\FlightAppWin\FlightApp\FlightApp\bin\Debug\FlightApp.exe"
+﻿'SystemUtil.Run "C:\Users\utpal\Desktop\CI_App\FlightApp.exe"
 
 UIAWindow("Login").UIAEdit("txtUser").SetValue DataTable.Value("Username","Action1")
 UIAWindow("Login").UIAEdit("txtPass").SetValue DataTable.Value("Password","Action1")
@@ -6,8 +6,8 @@ UIAWindow("Login").UIAButton("Login").Click
 
 UIAWindow("Booking").UIAComboBox("cmbFrom").Select DataTable.Value("From_City","Action1")
 UIAWindow("Booking").UIAComboBox("cmbTo").Select DataTable.Value("To_City","Action1")
-'UIAWindow("Booking").UIAObject("Friday, March 09, 2018").Click
 
+'UIAWindow("Booking").UIAObject("Friday, March 09, 2018").Click
 'Date 
 'UIAWindow("Booking").UIAObject("Friday, March 09, 2018").Click
 
