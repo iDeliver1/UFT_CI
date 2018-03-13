@@ -22,8 +22,14 @@ else
 	reporter.ReportEvent micFail,"Enter value" ,"Number of ticket is not enter."	
 End If
 
-If UIAWindow("Booking").UIAComboBox("cmbClass").Exist(5) Then
-	UIAWindow("Booking").UIAComboBox("cmbClass").Select DataTable.Value("Class")
+If UIAWindow("Booking").UIAEdit("dTPicker").Exist(5) Then
+	
+	UIAWindow("Booking").UIAEdit("dTPicker").SetValue DataTable.Value("Date")	
+End If
+
+
+If UIAWindow("Booking").UIAComboBox("To").UIAEdit("To").Exist(5) Then
+	UIAWindow("Booking").UIAComboBox("To").UIAEdit("To").SetValue DataTable.Value("Class")
 else
 	reporter.ReportEvent micFail,"Enter value" ,"Travelling class in not enter."
 End If
