@@ -1,4 +1,10 @@
-﻿If UIAWindow("Booking").UIAComboBox("cmbFrom").Exist(5) Then
+﻿Dim qtpApp
+Dim qtpRepositories 
+Set qtpApp = CreateObject("QuickTest.Application") 
+Set qtpRepositories = qtpApp.Test.Actions("Flight_Booking").ObjectRepositories 
+qtpRepositories.Add(Environment.Value("TestDir")&"\Repository1.tsr")
+
+If UIAWindow("Booking").UIAComboBox("cmbFrom").Exist(5) Then
 	UIAWindow("Booking").UIAComboBox("cmbFrom").Select DataTable.Value("From_City")
 else
 	reporter.ReportEvent micFail,"Enter value" ,"Source is not enter."	
