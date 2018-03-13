@@ -1,4 +1,4 @@
-﻿'SystemUtil.Run "C:\Users\utpal\Desktop\CI_App\FlightApp.exe"
+﻿SystemUtil.Run "C:\Users\utpal\.jenkins\workspace\Build_Generate\FlightEXE\FlightApp\FlightApp\bin\Debug\FlightApp.exe"
 
 If UIAWindow("Login").UIAEdit("txtUser").Exist(5) Then
 	UIAWindow("Login").UIAEdit("txtUser").SetValue DataTable.Value("Username")	
